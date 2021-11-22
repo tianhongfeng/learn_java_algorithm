@@ -27,9 +27,11 @@ public class GenericObjectTest {
 //        }
 
         Method setMethod = clz.getMethod("setLists", List.class);
+        // 获得泛型数组
         Type[] genericParameterTypes = setMethod.getGenericParameterTypes();
         for (Type genericParameterType: genericParameterTypes){
             System.out.println("GenericParameterTypes为 ： " + genericParameterType.getTypeName());
+            //
             if(genericParameterType instanceof ParameterizedType){
                 ParameterizedType parameterizedType = ((ParameterizedType) genericParameterType);
                 System.out.println("ParameterizedType为 :" + parameterizedType.getTypeName());
