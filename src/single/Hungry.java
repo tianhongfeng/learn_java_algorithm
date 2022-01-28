@@ -1,7 +1,7 @@
 package single;
 
 
-// 懒汉式 事先创建好实例, 不会出现线程不安全
+// 饿汉式 事先创建好实例, 不会出现线程不安全
 public class Hungry {
 
 
